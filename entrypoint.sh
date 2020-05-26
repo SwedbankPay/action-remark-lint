@@ -12,7 +12,6 @@ if [ "${INPUT_REPORTER}" = 'github-pr-review' ]; then
     -name="remark-lint" \
     -reporter="github-pr-review" \
     -level="${INPUT_LEVEL}" \
-    -fail-on-error="${INPUT_FAIL_ON_ERROR:-false}" \
     -level="${INPUT_LEVEL:-error}" \
     ${INPUT_REVIEWDOG_FLAGS}
 else
