@@ -12,9 +12,9 @@ if [ "${INPUT_REPORTER}" = 'github-pr-review' ]; then
     -name="remark-lint" \
     -reporter="github-pr-review" \
     -level="${INPUT_LEVEL}" \
-    -filter-mode="${INPUT_FILTER_MODE}" \
-    -fail-on-error="${INPUT_FAIL_ON_ERROR}" \
-    -level="${INPUT_LEVEL}" \
+    -filter-mode="${INPUT_FILTER_MODE:-added}" \
+    -fail-on-error="${INPUT_FAIL_ON_ERROR:-false}" \
+    -level="${INPUT_LEVEL:-error}" \
     ${INPUT_REVIEWDOG_FLAGS}
 else
   # github-pr-check,github-check (GitHub Check API) doesn't support markdown annotation.
