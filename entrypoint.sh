@@ -12,7 +12,7 @@ if [ "${INPUT_REPORTER}" = 'github-pr-review' ]; then
     -name="remark-lint" \
     -diff="git diff master" \
     -reporter="github-pr-review" \
-    -level="${INPUT_LEVEL:-info}" \
+    -level="${INPUT_LEVEL:-info}"
     ${INPUT_REVIEWDOG_FLAGS}
 else
   # github-pr-check,github-check (GitHub Check API) doesn't support markdown annotation.
