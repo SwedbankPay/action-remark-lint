@@ -8,7 +8,7 @@ if [ "${INPUT_REPORTER}" = 'github-pr-review' ]; then
   # erroformat: https://git.io/JeGMU
   remark --quiet . 2>&1 |
   reviewdog \
-    -efm="%f\n%l:%c: %m" \
+    -efm="%-P%f\ %#%l:%c %# %trror  %m\ %s %# %trror  %m\ %#%l:%c %# %tarning  %m\ %s %# %tarning  %m\ %-Q\ %-G%.%#" \
     -name="remark-lint" \
     -reporter="github-pr-review" \
     -level="${INPUT_LEVEL}" \
