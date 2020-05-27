@@ -11,7 +11,6 @@ if [ "${INPUT_REPORTER}" = 'github-pr-review' ]; then
     -efm="%-P%f\ %#%l:%c %# %trror  %m\ %s %# %trror  %m\ %#%l:%c %# %tarning  %m\ %s %# %tarning  %m\ %-Q\ %-G%.%#" \
     -name="remark-lint" \
     -reporter="github-pr-review" \
-    -level="${INPUT_LEVEL}" \
     -level="${INPUT_LEVEL:-error}" \
     ${INPUT_REVIEWDOG_FLAGS}
 else
